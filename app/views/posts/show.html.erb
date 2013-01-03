@@ -1,7 +1,7 @@
 <div class="container">
   <h1 style="text-align:center"><%= @post.title %></h1>
   <hr>
-    <%= @post.body %>
+    <%= @post.body.html_safe %>
   <hr>
   <br>
   <h4>Comments :</h4><br>
@@ -15,7 +15,7 @@
     </p>
 
     <p>
-      <%= c.body %>
+      <%= c.body.html_safe %>
     </p>
     </div>
   <% end %>

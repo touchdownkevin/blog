@@ -8,7 +8,7 @@
           <%= post.date %>
           <br>
         </p>
-        <%= post.body %>
+        <%= post.body.html_safe %>
         <hr>
         <%= link_to "Learn More", post_path(post),:class => 'muted small'%>
     <% end %>
