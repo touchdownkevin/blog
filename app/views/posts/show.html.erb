@@ -1,0 +1,44 @@
+<div class="container">
+  <h1 style="text-align:center"><%= @post.title %></h1>
+  <hr>
+  <p>
+    <%= @post.body %>
+  </p>
+  <hr>
+  <br>
+  <h4>Comments :</h4><br>
+
+  <% @post.comments.each do |c| %>
+    <div class="well well-small" style="margin:0px;border-radius: 10px;">
+    <p>
+      <strong><%= c.name %> &middot;</strong>
+      <small class="muted"><i><%= time_ago_in_words(c.created_at) %> ago</i></small>
+      <hr>
+    </p>
+
+    <p>
+      <%= c.body %>
+    </p>
+    </div>
+  <% end %>
+
+
+  <br />
+  <%= form_for [@post, Comment.new] do |f| %>
+  <p>
+    <h4><i>Add New Comment:</i></h4><br />
+    <%= f.text_area :body,:style => "width:100%" %><br />
+    <%= f.text_field :name, :value => "Your Name..." %><br />
+  </p>
+
+  <p>
+    <%= f.submit "Add Comment", :class => "btn btn-inverse" %>
+  </p>
+  <% end %>
+
+</div>
+
+
+  
+
+

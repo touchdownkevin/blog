@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kevin's Web Site</title>
+  <title>Kevin's webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+  bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+  </script>
+  <%= yield(:head)%>
 </head>
 <body>
+  <!--The Navigation Bar of the page-->
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+    		<div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="#">Kevin Qin</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+      	<ul class="nav">
+      		<li class="active">
+            <%= link_to "Home",home_path%>
+      		</li>
+      		<li>
+      			<a href="#">Project</a>
+      		</li>
+      		<li>
+      			<%= link_to "Blog",blog_path%>
+            
+      		</li>
+      		<li class="dropdown">
+      			<a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+      			<ul class="dropdown-menu">
+      				<li><a href="#">part1</a></li>
+      			</ul>
+      		</li>
+      	</ul>
 
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+      </div>
+    	</div>
+  	</div>
+	</div>
 <%= yield %>
-
+<div class="navbar navbar-fixed-bottom" id="footer">
+	<div class="container">
+		<p class="pull-left text-info"><small>COPYRIGHT &copy; 2012 KEVIN QIN </small></p>
+      	<p class="pull-right"><a href="#"><small>Back to Top &uarr;</small></a></p>
+  	</div>
+</div>
 </body>
 </html>

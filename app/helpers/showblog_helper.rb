@@ -1,0 +1,2 @@
+module ShowblogHelper
+end
