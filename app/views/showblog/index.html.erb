@@ -7,8 +7,8 @@
           <h2 class="muted"><%= post.title %></h2>
           <%= post.date %>
           <br>
-          <%= post.body %>
         </p>
+        <%= post.body %>
         <hr>
         <%= link_to "Learn More", post_path(post),:class => 'muted small'%>
     <% end %>
