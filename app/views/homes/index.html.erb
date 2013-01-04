@@ -34,29 +34,63 @@
   </div-->
   <!--Introductions-->
   <div class="container">
-    <h1>Who's Kevin?</h1>
-    <p>Well, Kevin is a guy with</p>
+    <h1 class="brand">Who's Kevin?</h1>
+    <br>
+    <p class="lead muted">
+      Kevin Qin,a logical thinker who loves Computer Science. He got his computer science master degree in 2012. He currently resides in Washington,D.C.,working as a software developer.
+      <br><br>
+      Kevin enjoys working with numbers, his favoriate subject is mathematics.
+      <br>
+      He worked as a GIS developer 3 years ago, he played with spatial statistics, 3D-map, server-based geo-analysis at that time. He find that he thoroughly enjoys programming(particularly java and ruby). <br>
+      <br>Then he focused his career on Computer Science field. His work inclueds DBA,XML developer,Web Developer,Software Developer.
+      <br><br>
+      Besides programming, Kevin also loves table-tennis,swimming,and cool-things. 
+    </p>
   </div>
   <hr>
   <!--The information row-->
   <div class="container">
     <div class="row-fluid">
-    <div class="span4" style="text-align:center">
-      <h2>Heading</h2>
-      <p style="text-align:left">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+    <div class="span4">
+      <h3 class="muted">Meet Kevin</h3>
+      <img class="profile" src="<%= asset_path('profile.png')%>">
+      <p style="text-align:left">Hi,guys, I'm kevin. I'd like to "Tech" my life. Also, I love "Geek" things. Are you looking for someone to discuss a cool idea? If you need a Tech-freelancer? Or you have an interesting position to offer? <br>Feel free to shoot me an email. J </p>
       <p><a href="#" class="btn">View more</a></p>
     </div>
     <div class="span5">
       <h3 class="muted">Follow me</h3>
       <div class="row">
         <div class="span3" style="text-align:right">
-          <img class="img-circle github" src="./git.png" title="github">
+          <a href="http://twitter.com/kq7726">
+            <img class="img-circle followme" src="<%= asset_path('twitterlogo.png') %>" title="twitter">
+          </a>
         </div>
-        <div class="span9" style="text-align:left"> hello just follow up me on github. I followed some projects there
+        <div class="span9" style="text-align:left"> Follow me on Twitter 
+          <a href="http://twitter.com/kq7726">@kq7726</a> to find my updates...
         </div>
       </div>
-      <p style="text-align:left">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-      <p><a href="#" class="btn">View more</a></p>
+      <hr>
+      <div class="row">
+        <div class="span3" style="text-align:right">
+          <a href="http://www.linkedin.com/in/kq7726">
+            <img src="<%= asset_path('linkedinlogo.png') %>" title="linkedin">
+          </a>
+
+        </div>
+        <div class="span9" style="text-align:left">More about my skills and interests...
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="span3" style="text-align:right">
+          <a href="http://www.facebook.com/qshkevin">
+            <img src="<%= asset_path('facebooklogo.png') %>" title="facebook">
+          </a>
+
+        </div>
+        <div class="span9" style="text-align:left">Where to read my story and join my events...
+        </div>
+      </div>
     </div>
     <div class="span3">
       <h3 class="muted">Contact me</h3>
