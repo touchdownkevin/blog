@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Web2::Application.load_tasks
+Web3::Application.load_tasks
