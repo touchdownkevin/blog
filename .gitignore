@@ -13,3 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# For heroku, pg database
+/Gemfile
+/Gemfile.lock
