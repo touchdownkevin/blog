@@ -1,7 +1,6 @@
 <div class="container">
   <h1>Kevin's Blog <small>Read my activities and inspiration</small></h1>
-</div>
-<div class="well well-large">
+  <div class="well well-large" style="margin:0px;">
     <% @posts.each do |post| %>
         <p>
           <h2 class="muted"><%= post.title %></h2>
@@ -13,4 +12,5 @@
         <%= link_to "Learn More", post_path(post),:class => 'muted small'%>
     <% end %>
 
+</div>
 </div>
