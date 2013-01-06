@@ -9,7 +9,8 @@
   <% @post.comments.each do |c| %>
     <div class="well well-small" style="margin:0px;border-radius: 10px;">
     <p>
-      <strong><%= c.name %> &middot;</strong>
+      <strong>Posted by</strong>
+      <strong>&middot;<%= c.name %> &middot;</strong>
       <small class="muted"><i><%= time_ago_in_words(c.created_at) %> ago</i></small>
       <hr>
     </p>
