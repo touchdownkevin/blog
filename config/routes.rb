@@ -9,6 +9,7 @@ Web3::Application.routes.draw do
 
   match '/Blog' => 'showblog#index', :as => :blog
   match '/Home' => 'homes#index', :as=> :home
+  match '/Resume' => 'resume#index', :as => :resume
   #match ':controller/:action/:id'
   #match ':controller/:action/:id.:format'
   # The priority is based upon order of creation:

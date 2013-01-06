@@ -35,17 +35,11 @@
             <%= link_to "Home",home_path%>
       		</li>
       		<li>
-      			<a href="#">Project</a>
+      			<a href="Resume">Resume</a>
       		</li>
       		<li>
       			<%= link_to "Blog",blog_path%>
             
-      		</li>
-      		<li class="dropdown">
-      			<a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
-      			<ul class="dropdown-menu">
-      				<li><a href="#">part1</a></li>
-      			</ul>
       		</li>
       	</ul>
 
@@ -55,9 +49,71 @@
   	</div>
 	</div>
 <%= yield %>
+  <hr>
+  <!--The information row-->
+  <div class="container">
+    <div class="row-fluid">
+    <div class="span4">
+      <h3 class="muted">Meet Kevin</h3>
+      <img class="profile" src="<%= asset_path('profile.png')%>"><br/><br/>
+      <i><p style="text-align:left ">Hi,guys, I'm Kevin. <br>I'd like to "Tech" my life. Also, I love "Geek" things. Are you looking for someone to discuss a cool idea? If you need an IT-freelancer? Or you have an interesting position to offer? <br>Feel free to shoot me an email. J </p></i>
+    </div>
+    <div class="span5">
+      <h3 class="muted">Follow me</h3>
+      <div class="row">
+        <div class="span3" style="text-align:right">
+          <a href="http://twitter.com/kq7726" target="_blank">
+            <img class="img-circle followme" src="<%= asset_path('twitterlogo.png') %>" title="twitter">
+          </a>
+        </div>
+        <div class="span9" style="text-align:left"><br> Follow me on Twitter 
+          <a href="http://twitter.com/kq7726" target="_blank">@kq7726</a> to find my updates...
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="span3" style="text-align:right">
+          <a href="http://www.linkedin.com/in/kq7726" target="_blank">
+            <img src="<%= asset_path('linkedinlogo.png') %>" title="linkedin">
+          </a>
+
+        </div>
+        <div class="span9" style="text-align:left"><br>More about my skills and interests...
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="span3" style="text-align:right">
+          <a href="http://www.facebook.com/qshkevin" target="_blank">
+            <img class="followme" src="<%= asset_path('facebooklogo.png') %>" title="facebook">
+          </a>
+
+        </div>
+        <div class="span9" style="text-align:left"><br>Where to read my story and join my events...
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <h3 class="muted">Contact me</h3>
+      <address>
+        <strong>Kevin Qin</strong><br>
+        175 Stoneway Lane<br>
+        Washington,D.C. , 20008<br>
+        <abbr title="Phone">P:</abbr> (215) 917-0623
+      </address>
+      <address>
+        <strong>Email:</strong><br>
+        <a href="mailto:#">touchdownkevin@gmail.com</a><br>
+        <strong>Skype:</strong><br>
+        <a>ib-qshkevin</a>
+      </address>
+    </div>
+    </div>
+  </div>
+  <!--The footer-->
 <div class="navbar navbar-fixed-bottom" id="footer">
 	<div class="container">
-		<p class="pull-left text-info"><small>COPYRIGHT &copy; 2012 KEVIN QIN </small></p>
+		<p class="pull-left text-info"><small>COPYRIGHT &copy; 2013 KEVIN QIN  </small></p>
       	<p class="pull-right"><a href="#"><small>Back to Top &uarr;</small></a></p>
   	</div>
 </div>
