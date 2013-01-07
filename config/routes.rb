@@ -12,6 +12,7 @@ Web3::Application.routes.draw do
   match '/Resume' => 'resume#index', :as => :resume
   #match ':controller/:action/:id'
   #match ':controller/:action/:id.:format'
+  #match '/posts/:id/comments'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
