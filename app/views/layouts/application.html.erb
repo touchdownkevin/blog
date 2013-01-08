@@ -30,6 +30,22 @@
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in?%>
+            <strong>Welcome!</strong>
+            <%= current_user.email %> |
+            <%= link_to 'My info', edit_user_registration_path %> |
+            <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+          <% elsif admin_signed_in?%>
+            <strong>Welcome My Boss</strong>
+            <%= current_admin.email %> |
+            <%= link_to 'Admin section', edit_admin_registration_path %> |
+            <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete %>
+          <% else %>
+            <%= link_to "Login",new_user_session_path%>
+            <%= link_to "Sign up",new_user_registration_path%>
+          <% end %>
+        </p>
       	<ul class="nav">
       		<li class="active">
             <%= link_to "Home",home_path%>
@@ -48,6 +64,10 @@
     	</div>
   	</div>
 	</div>
+  <div class="alert">
+    <p><%= notice %></p>
+    <p><%= alert %></p>
+  </div>
 <%= yield %>
   <hr>
   <!--The information row-->

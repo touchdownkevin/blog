@@ -1,3 +1,4 @@
+<% if user_signed_in?%>
 <div class="container">
   <h1>Kevin's Blog <small>Read my activities and inspiration</small></h1>
   <div class="well well-large" style="margin:0px;">
@@ -14,3 +15,8 @@
 
 </div>
 </div>
+<% else %>
+<div class="container">
+  <h1>You'd better to login at first !!</h1>
+</div>
+<% end %>
