@@ -26,8 +26,17 @@
   <%= form_for [@post, Comment.new] do |f| %>
   <p>
     <h4><i>Add New Comment:</i></h4><br />
-    <%= f.text_area :body,:style => "width:100%" %><br />
-    <%= f.text_field :name,:value => "Your Name..." %><br />
+    <%= f.text_area :body,:style => "width:100%" %><br/>
+    <%if user_signed_in? %>
+      <%= f.text_field :name,:type=>"text",:placeholder =>"Your Name"  %><br/>
+      <%= f.email_field :email,:value=> current_user.email ,:readonly=>"readonly" %><br/>
+    <%elsif admin_signed_in? %>
+      <%= f.text_field :name,:type=>"text",:placeholder => "Kevin Qin" %><br/>
+      <%= f.email_field :email,:value => "kq7726@gmail.com" %><br/>
+    <%else%>
+      <%= f.text_field :name,:type=>"text",:placeholder => "Your Name..." %><br/>
+      <%= f.email_field :email,:placeholder => "Input Your email here" %><br/>
+    <%end%>
   </p>
 
   <p>

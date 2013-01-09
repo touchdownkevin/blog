@@ -1,27 +1,23 @@
 <div class="container">
 	<div class="well">
 	<div style="margin-left:10%;margin-right:10%;">
-	<h2 style="text-align:center;">Sign in</h2>
+	<h1 style="text-align:center;">Sign in</h1><br/>
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   	<div style="text-align:center;"><%= f.email_field :email,:type=>"text",:placeholder=>"Input Your Email ..."%></div><br/>
-  	<div style="text-align:center;"><%= f.password_field :password,:type=>"text",:placeholder=>"Input Your Password ..."%></div>
+  	<div style="text-align:center;"><%= f.password_field :password,:type=>"password",:placeholder=>"Input Your Password ..."%></div>
 
 	<% if devise_mapping.rememberable? -%>
-    <div class="row-fluid" style="text-align:center;">
-    	<div class="span3 offset3">
-    		<%= f.check_box :remember_me%>
+    	<div class="checkbox inline offset2">
+    		<%= f.check_box :remember_me,:type=>"checkbox"%>
+        <p class="muted">Remember me</p>
     	</div>
-    	<div class="span3">
-    	 <%= f.label :remember_me%>
-    	</div>
-    </div>
   	<% end -%>
-
+    <br/><br/>
   	<div style="text-align:center;"><%= f.submit "Sign in",:class=>"btn-large btn-primary",:size=>"30"%></div>
 	<% end %>
-
-	<%= render "devise/shared/links" %>
-	
-	
+  <div style="text-align:center;">
+	 <%= render "devise/shared/links" %>
+	</div>
+	</div>
 </div>
 </div>

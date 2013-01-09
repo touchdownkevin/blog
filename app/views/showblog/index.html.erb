@@ -15,8 +15,42 @@
 
 </div>
 </div>
+<%elsif admin_signed_in?%>
+<div class="container">
+  <h1>Kevin's Blog <small>Read my activities and inspiration</small></h1>
+  <div class="well well-large" style="margin:0px;">
+    <% @posts.each do |post| %>
+        <p>
+          <h2 class="muted"><%= post.title %></h2>
+          <%= post.date %>
+          <br>
+        </p>
+        <%= post.body.html_safe %>
+        <hr>
+        <%= link_to "Learn More", post_path(post),:class => 'muted small'%>
+    <% end %>
+
+</div>
+</div>
 <% else %>
 <div class="container">
-  <h1>You'd better to login at first !!</h1>
+  <h1>Kevin's Blog <small>Read my activities and inspiration</small></h1>
+  <div class="well well-large" style="margin:0px;">
+    <% @posts.each do |post| %>
+        <p>
+          <h2 class="muted"><%= post.title %></h2>
+          <%= post.date %>
+          <br>
+        </p>
+        <%= post.body.html_safe %>
+        <hr>
+        <%= link_to "Learn More", post_path(post),:class => 'muted small'%>
+    <% end %>
+
 </div>
+</div>
+<!-- To Block unregisted users to the blog page.
+  <script type="text/javascript">
+    window.location.href="/users/sign_in"  // put your correct path in a string here
+  </script>
 <% end %>
