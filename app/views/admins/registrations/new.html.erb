@@ -18,18 +18,5 @@
 
 <%= render "devise/shared/links" %>
 <%else%>
-<div class="container">
-	<div class="well">
-		<h2 class="muted" style="text-align:center;">Hello Hacker! </h2>
-		<hr>
-		<p>Hi,Buddy, The system diagnosed the you are a hacker !</p><br/>
-		<p>I already get your IP address. But don't worry, I won't do anything for this time...</p><br/>
-		<p>To protect your</p>
-		<a href="#" rel="tooltip" content="What is RP? <br/>It's a shortcut for chinese word RenPin.<br/>In short, the character impact the probability of occurrence of a favorable event, this will also reflect the probability of a person of luck , good or bad, it is the character on behalf of luck.">RP</a>
-		<p>,Please don't do this again! </p><br/>
-		<br/><br/><br/>
-		<p>Cheers</p><br/>
-		<p>Kevin</p>
-	</div>
-</div>
+<%= render "layouts/eastereggs"%>
 <%end%>
