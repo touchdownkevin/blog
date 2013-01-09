@@ -9,8 +9,8 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript">
   bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+  $(function(){$('a[rel=tooltip]').tooltip(data-html='true')});
   </script>
-  <script>$(function(){$('a[rel=tooltip]').tooltip(data-html='true')});</script>
   <%= yield(:head)%>
 </head>
 <body>
